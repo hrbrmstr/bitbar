@@ -1,6 +1,6 @@
 Package: bitbar
 Type: Package
-Title: bitbar title goes here otherwise CRAN checks fail
+Title: Craft macOS Menu Bar Applications with Rscript
 Version: 0.1.0
 Date: 2020-06-16
 Authors@R: c(
@@ -8,17 +8,22 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-5670-2640"))
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A good description goes here otherwise CRAN checks fail.
+Description: Mat Ryer's macOS utility <https://getbitbar.com/> enables any 
+    script to become a menu bar application. Tools are provided to make it 
+    easier to craft these scripts.
 URL: https://git.rud.is/hrbrmstr/bitbar
 BugReports: https://git.rud.is/hrbrmstr/bitbar/issues
 Encoding: UTF-8
-License: AGPL
+License: MIT + file LICENSE
 Suggests: 
     covr, tinytest
+Imports:
+    usethis,
+    magrittr,
+    clipr,
+    knitr,
+    sys
 Depends: 
     R (>= 3.5.0)
-Imports: 
-    httr,
-    jsonlite
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0

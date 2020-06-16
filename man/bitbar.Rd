@@ -4,9 +4,11 @@
 \name{bitbar}
 \alias{bitbar}
 \alias{bitbar-package}
-\title{...}
+\title{Craft macOS Menu Bar Applications with Rscript}
 \description{
-A good description goes here otherwise CRAN checks fail.
+Mat Ryer's macOS utility \url{https://getbitbar.com/} enables any
+script to become a menu bar application. Tools are provided to make it
+easier to craft these scripts.
 }
 \seealso{
 Useful links:
