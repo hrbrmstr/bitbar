@@ -33,6 +33,8 @@ add_entry <- function(text, type = c("direct", "submenu"), level=1, ...) {
         value <- tolower(as.character(value))
       } else if (!is.character(value)) {
         value <- toString(value)
+      } else {
+        if (name == "bash") { value = sprintf("'%s'", value) }
       }
       sprintf("%s=%s", name, value)
     }) -> params
@@ -41,7 +43,7 @@ add_entry <- function(text, type = c("direct", "submenu"), level=1, ...) {
 
   }
 
-  if (nchar(params) > 0) params <- sprintf(" | %s", params)
+  if (nchar(params) > 0) params <- sprintf("|%s", params)
 
   cat(entry, params, "\n", sep = "")
 

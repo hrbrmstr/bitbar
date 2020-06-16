@@ -21,9 +21,13 @@ Imports:
     usethis,
     magrittr,
     clipr,
-    knitr,
-    sys
+    XML,
+    httr,
+    sys,
+    miniUI,
+    shiny,
+    ulid
 Depends: 
-    R (>= 3.5.0)
+    R (>= 3.6.0)
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0

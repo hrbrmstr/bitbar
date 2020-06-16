@@ -1,4 +1,4 @@
-#!/Library/Frameworks/R.framework/Resources/bin/Rscript --default-packages=base,tools,utils,stats,methods
+#!/Library/Frameworks/R.framework/Resources/bin/Rscript
 #
 # <bitbar.title>{{{title}}}</bitbar.title>
 # <bitbar.version>{{{version}}}</bitbar.version>
@@ -17,13 +17,25 @@ suppressPackageStartupMessages({
   # other library() calls here
 })
 
+this_script <- sub("--file=", "", grep("--file=", commandArgs(trailingOnly = FALSE), value=TRUE)) # assumes no spaces
+args <- commandArgs(trailingOnly = TRUE) # holds param1, param2, etc.; change to TRUE if you want path to script
+
+if (length(args) > 0) {
+
+  # handle self-invocation vs display menu things
+
+}
+
 add_entry("{{{title}}}") # this will be the menubar title
 
 add_separator()
 
 add_entry(":mushroom: color!", color="#ff0000") # color!
 
-add_entry("R-project…", href="https://r-project.org/") # clickable URL
+add_entry("Open R Frameworks directory…", bash="/usr/bin/open", param1="file:///Library/Frameworks/R.framework/Versions/Current", terminal=FALSE)
+
+add_entry("Visit R-project…", href="https://r-project.org/") # clickable URL
+add_entry("Visit R for macOS…", href="https://mac.r-project.org/") # clickable URL
 
 add_separator()
 

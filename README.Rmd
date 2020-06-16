@@ -15,6 +15,20 @@ hrbrpkghelpr::stinking_badges()
 hrbrpkghelpr::yank_title_and_description()
 ```
 
+## Installing BitBar
+
+If you have [homebrew](https://brew.sh/) installed, you can do:
+
+```shell
+brew cask install bitbar
+```
+
+Otherwise [grab the latest release](https://github.com/matryer/bitbar/releases/latest) and install it the hard way.
+
+Open the application and choose the directory you want to be your plugins directory. This is where your menubar scripts will go.
+(I use `~/Library/BitBar/Plugins` but you can pick any directory; just make sure it isn't one with
+a gazillion files as that impacts BitBar's performance).
+
 ## What's Inside The Tin
 
 The following functions are implemented:
@@ -37,6 +51,16 @@ library(bitbar)
 # current version
 packageVersion("bitbar")
 
+```
+
+This will open up a `my-awesome-bitbar-script.R` in RStudio (if available) or whatever editor `file.edit()` is configured to use.
+
+```{r ex-01, eval=FALSE}
+new_bitbar_script(
+  save_as = file.path(bitbar_plugins_dir(), "my-awesome-bitbar-script.R"),
+  title = ":blue_heart:",
+  description = "Example BitBar Script")
+)
 ```
 
 ## bitbar Metrics

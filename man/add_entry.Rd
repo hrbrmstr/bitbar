@@ -5,7 +5,7 @@
 \alias{add_separator}
 \title{Add an entry to the menu}
 \usage{
-add_entry(text, type = c("direct", "output", "menu", "submenu"), ...)
+add_entry(text, type = c("direct", "submenu"), level = 1, ...)
 
 add_separator()
 }
@@ -15,10 +15,10 @@ add_separator()
 \item{type}{type of entry.
 \itemize{
 \item \code{direct} has no dashes prefix and all output goes directly to the menubar. The first use of \code{direct} will set the menubar title.
-\item \code{output} uses \verb{---},
-\item \code{menu} uses \verb{--},
-\item \code{submenu} uses \verb{----}
+\item \code{submenu} uses \code{level} repeats of \verb{--} to put these items in submenus
 }}
+
+\item{level}{used with \code{submenu} option of \code{type}}
 
 \item{named}{BitBar entry parameters. See \code{References}.}
 }

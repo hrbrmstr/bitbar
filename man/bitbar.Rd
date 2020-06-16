@@ -10,6 +10,19 @@ Mat Ryer's macOS utility \url{https://getbitbar.com/} enables any
 script to become a menu bar application. Tools are provided to make it
 easier to craft these scripts.
 }
+\section{Installing BitBar}{
+
+
+If you have \href{https://brew.sh/}{homebrew} installed, you can do:\if{html}{\out{<div class="shell">}}\preformatted{brew cask install bitbar
+}\if{html}{\out{</div>}}
+
+Otherwise \href{https://github.com/matryer/bitbar/releases/latest}{grab the latest release} and install it the hard way.
+
+Open the application and choose the directory you want to be your plugins directory. This is where your menubar scripts will go.
+(I use \verb{~/Library/BitBar/Plugins} but you can pick any directory; just make sure it isn't one with
+a gazillion files as that impacts BitBar's performance).
+}
+
 \seealso{
 Useful links:
 \itemize{

@@ -1,0 +1,4 @@
+Name: Create a new {bitbar} script
+Description: Create a new {bitbar} script
+Binding: create_new_bitbar_script
+Interactive: true

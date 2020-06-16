@@ -4,6 +4,14 @@
 #' @param title,version,author,github_user,description,dependencies,image_url,about_url
 #'        BitBar metadata passed on to the generator.
 #' @export
+#' @examples
+#' if (interactive()) {
+#'   new_bitbar_script(
+#'     save_as = file.path(bitbar_plugins_dir(), "my-awesome-bitbar-script.R"),
+#'     title = ":blue_heart:",
+#'     description = "Example BitBar Script")
+#'   )
+#' }
 new_bitbar_script <- function(save_as,
                        title = "Script Title",
                        version = "1.0",

@@ -24,3 +24,12 @@ new_bitbar_script(
 \description{
 Helper to get started with a new BitBar {bitbar} script
 }
+\examples{
+if (interactive()) {
+  new_bitbar_script(
+    save_as = file.path(bitbar_plugins_dir(), "my-awesome-bitbar-script.R"),
+    title = ":blue_heart:",
+    description = "Example BitBar Script")
+  )
+}
+}
