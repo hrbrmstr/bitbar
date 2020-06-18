@@ -50,7 +50,19 @@ create_new_bitbar_script <- function() {
         about_url = input$about_url
       )
 
-      stopApp(returnValue)
+      stopApp(
+        list(
+          save_as = input$save_as,
+          title = input$title,
+          version = input$version,
+          author = input$author,
+          github_user = input$github_user,
+          description = input$description,
+          dependencies = input$dependencies,
+          image_url = input$image_url,
+          about_url = input$about_url
+        )
+      )
 
     })
 
@@ -62,4 +74,9 @@ create_new_bitbar_script <- function() {
 
 }
 
-
+#' Open BitBar Plugins Directory in the Finder
+#'
+#' @export
+open_bitbar_dir <- function() {
+  system(sprintf("open %s", shQuote(bitbar_plugins_dir())))
+}

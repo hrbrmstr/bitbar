@@ -2,3 +2,8 @@ Name: Create a new {bitbar} script
 Description: Create a new {bitbar} script
 Binding: create_new_bitbar_script
 Interactive: true
+
+Name: Open {bitbar} Plugins Directory
+Description: Open {bitbar} Plugins Directory in the Finder
+Binding: open_bitbar_dir
+Interactive: false

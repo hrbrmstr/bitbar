@@ -9,7 +9,7 @@ by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keyb
 [![Linux build
 Status](https://travis-ci.org/hrbrmstr/bitbar.svg?branch=master)](https://travis-ci.org/hrbrmstr/bitbar)  
 ![Minimal R
-Version](https://img.shields.io/badge/R%3E%3D-3.5.0-blue.svg)
+Version](https://img.shields.io/badge/R%3E%3D-3.6.0-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 # bitbar
@@ -36,18 +36,26 @@ it the hard way.
 
 Open the application and choose the directory you want to be your
 plugins directory. This is where your menubar scripts will go. (I use
-`~/Library/Application Support/BitBar/Plugins` but you can pick any
-directory; just make sure it isn’t one with a gazillion files as that
-impacts BitBar’s performance).
+`~/Library/BitBar/Plugins` but you can pick any directory; just make
+sure it isn’t one with a gazillion files as that impacts BitBar’s
+performance).
 
 ## What’s Inside The Tin
 
 The following functions are implemented:
 
   - `add_entry`: Add an entry to the menu
+  - `b64_image`: Return a base64 encoded string of an image (local
+    filesystem or URL)
   - `bitbar_plugins_dir`: BitBar plugins directory
   - `new_bitbar_script`: Helper to get started with a new BitBar bitbar
     script
+  - `open_bitbar_dir`: Open BitBar Plugins Directory in the Finder
+  - `r_logo_small`: Images that come with the package
+
+There are also two RStudio Addins, one with a GUI for entering in the
+script metadata & starting a new BitBar {bitbar} script and one for
+opening up the BitBar plugins directory in the Finder.
 
 ## Installation
 
@@ -59,6 +67,8 @@ remotes::install_git("https://git.sr.ht/~hrbrmstr/bitbar")
 remotes::install_gitlab("hrbrmstr/bitbar")
 # or
 remotes::install_bitbucket("hrbrmstr/bitbar")
+# or
+remotes::install_github("hrbrmstr/bitbar")
 ```
 
 NOTE: To use the ‘remotes’ install options you will need to have the
@@ -81,7 +91,7 @@ available) or whatever editor `file.edit()` is configured to use.
 new_bitbar_script(
   save_as = file.path(bitbar_plugins_dir(), "my-awesome-bitbar-script.R"),
   title = ":blue_heart:",
-  description = "Example BitBar Script")
+  description = "Example BitBar Script"
 )
 ```
 
@@ -89,8 +99,8 @@ new_bitbar_script(
 
 | Lang | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 | :--- | -------: | ---: | --: | ---: | ----------: | ---: | -------: | ---: |
-| R    |        7 | 0.88 |  96 | 0.88 |          29 | 0.57 |       68 | 0.63 |
-| Rmd  |        1 | 0.12 |  13 | 0.12 |          22 | 0.43 |       40 | 0.37 |
+| R    |       10 | 0.91 | 191 | 0.94 |          51 | 0.69 |       79 | 0.66 |
+| Rmd  |        1 | 0.09 |  13 | 0.06 |          23 | 0.31 |       41 | 0.34 |
 
 ## Code of Conduct
 

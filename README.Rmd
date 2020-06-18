@@ -37,6 +37,8 @@ The following functions are implemented:
 hrbrpkghelpr::describe_ingredients()
 ```
 
+There are also two RStudio Addins, one with a GUI for entering in the script metadata & starting a new BitBar {bitbar} script and one for opening up the BitBar plugins directory in the Finder.
+
 ## Installation
 
 ```{r install-ex, results='asis', echo=FALSE, cache=FALSE}
@@ -59,7 +61,7 @@ This will open up a `my-awesome-bitbar-script.R` in RStudio (if available) or wh
 new_bitbar_script(
   save_as = file.path(bitbar_plugins_dir(), "my-awesome-bitbar-script.R"),
   title = ":blue_heart:",
-  description = "Example BitBar Script")
+  description = "Example BitBar Script"
 )
 ```
 
