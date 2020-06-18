@@ -8,6 +8,21 @@
 # <bitbar.dependencies>{{{dependencies}}}</bitbar.dependencies>
 # <bitbar.image>{{{image_url}}}</bitbar.image>
 # <bitbar.abouturl>{{{about_url}}}</bitbar.abouturl>
+#
+# REMINDER: You can have the script auto-refresh by changing the filename
+#
+# {name}.{time}.{ext}
+# name - The name of the file
+# time - The refresh rate (see below)
+# ext - The file extension
+#
+# For example:
+# `date.1m.sh` would refresh every minute.
+#
+# 10s - ten seconds
+# 1m - one minute
+# 2h - two hours
+# 1d - a day
 
 suppressPackageStartupMessages({
   library(magrittr, quietly = TRUE, verbose = FALSE, warn.conflicts = FALSE)

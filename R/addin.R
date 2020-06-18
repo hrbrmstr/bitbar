@@ -8,6 +8,9 @@ create_new_bitbar_script <- function() {
         value = file.path(bitbar_plugins_dir(), sprintf("%s-new-plugin.R", ulid::generate())),
       ),
       shiny::textInput(
+        inputId = "refresh", label = "Run every (leave blank for no auto-refresh):", value = "", width="100%",
+      ),
+      shiny::textInput(
         inputId = "title", label = "Title:", value = "Script Title", width="100%",
       ),
       shiny::textInput(
@@ -47,7 +50,8 @@ create_new_bitbar_script <- function() {
         description = input$description,
         dependencies = input$dependencies,
         image_url = input$image_url,
-        about_url = input$about_url
+        about_url = input$about_url,
+        refresh = input$refresh
       )
 
       stopApp(
@@ -60,7 +64,8 @@ create_new_bitbar_script <- function() {
           description = input$description,
           dependencies = input$dependencies,
           image_url = input$image_url,
-          about_url = input$about_url
+          about_url = input$about_url,
+          refresh = input$refresh
         )
       )
 
@@ -68,9 +73,9 @@ create_new_bitbar_script <- function() {
 
   }
 
-  viewer <- dialogViewer("New BitBar", width = 400, height = 800)
+  viewer <- dialogViewer("New BitBar", width = 400, height = 600)
 
-  runGadget(ui, server, viewer = viewer)
+  invisible(runGadget(ui, server, viewer = viewer))
 
 }
 

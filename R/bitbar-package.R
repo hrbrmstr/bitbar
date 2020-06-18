@@ -21,7 +21,6 @@
 #' @md
 #' @name bitbar
 #' @importFrom usethis use_template
-#' @importFrom XML readKeyValueDB
 #' @import httr shiny miniUI
 #' @keywords internal
 #' @author Bob Rudis (bob@@rud.is)

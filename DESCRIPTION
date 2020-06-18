@@ -21,7 +21,6 @@ Imports:
     usethis,
     magrittr,
     clipr,
-    XML,
     httr,
     sys,
     miniUI,

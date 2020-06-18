@@ -13,13 +13,19 @@ new_bitbar_script(
   description = "BitBar Plugin Using R",
   dependencies = "R",
   image_url = "",
-  about_url = ""
+  about_url = "",
+  refresh = ""
 )
 }
 \arguments{
 \item{save_as}{full path (including scriptname.R) to where you want the file saved}
 
 \item{title, version, author, github_user, description, dependencies, image_url, about_url}{BitBar metadata passed on to the generator.}
+
+\item{refesh}{if non-blank this will cause the filename to include a refresh hint
+in the \code{save_as} filename before the ending \code{.R} so BitBar will run the script
+every \code{refresh} period. See \href{https://github.com/matryer/bitbar#configure-the-refresh-time}{Configuring the refresh time}
+for more information.}
 }
 \description{
 Helper to get started with a new BitBar {bitbar} script

@@ -14,17 +14,14 @@ read_bitbar_prefs <- function() {
     )
   }
 
-  tf <- tempfile(fileext = ".xml")
-  on.exit(unlink(tf))
-
   sys::exec_internal(
-    cmd = "plistutil",
-    args = c("--infile", bbprefs, "--outfile", tf)
+    cmd = "/usr/bin/plutil",
+    args = c("-extract", "pluginsDirectory", "swift", "-o", "-", bbprefs)
   ) -> res
 
   if (res$status == 0) {
 
-    res <- XML::readKeyValueDB(tf)
+    res <- gsub('"', "", sub('^[^"]+', "", rawToChar(res$stdout)))
     res
 
   } else {
@@ -37,6 +34,5 @@ read_bitbar_prefs <- function() {
 #'
 #' @export
 bitbar_plugins_dir <- function() {
-  prefs <- read_bitbar_prefs()
-  prefs[["pluginsDirectory"]]
+  read_bitbar_prefs()
 }
