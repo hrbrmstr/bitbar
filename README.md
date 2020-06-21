@@ -45,6 +45,7 @@ performance).
 The following functions are implemented:
 
   - `add_entry`: Add an entry to the menu
+  - `applescript`: Execute AppleScript and Return Results
   - `b64_image`: Return a base64 encoded string of an image (local
     filesystem or URL)
   - `bitbar_plugins_dir`: BitBar plugins directory
@@ -52,6 +53,7 @@ The following functions are implemented:
     script
   - `open_bitbar_dir`: Open BitBar Plugins Directory in the Finder
   - `r_logo_small`: Images that come with the package
+  - `reachable`: Is the internet accessible?
 
 There are also two RStudio Addins, one with a GUI for entering in the
 script metadata & starting a new BitBar {bitbar} script and one for
@@ -99,8 +101,8 @@ new_bitbar_script(
 
 | Lang | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 | :--- | -------: | ---: | --: | ---: | ----------: | ---: | -------: | ---: |
-| R    |       10 | 0.91 | 191 | 0.94 |          51 | 0.69 |       79 | 0.66 |
-| Rmd  |        1 | 0.09 |  13 | 0.06 |          23 | 0.31 |       41 | 0.34 |
+| R    |       12 | 0.92 | 221 | 0.94 |          63 | 0.73 |      122 | 0.75 |
+| Rmd  |        1 | 0.08 |  13 | 0.06 |          23 | 0.27 |       41 | 0.25 |
 
 ## Code of Conduct
 
