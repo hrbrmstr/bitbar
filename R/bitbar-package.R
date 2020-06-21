@@ -21,6 +21,7 @@
 #' @md
 #' @name bitbar
 #' @importFrom usethis use_template
+#' @importFrom tools file_path_sans_ext file_ext
 #' @import httr shiny miniUI
 #' @keywords internal
 #' @author Bob Rudis (bob@@rud.is)
